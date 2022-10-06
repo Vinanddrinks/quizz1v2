@@ -7,13 +7,13 @@
         </div>
       </li>
       <li class="linkitem">
-        <router-link to="/">Home</router-link>
+        <router-link to="/">About Us</router-link>
       </li>
       <li class="linkitem">
-        <router-link to="/ourproductview">About</router-link>
+        <router-link to="/ourproductview">Products</router-link>
       </li>
       <li class="linkitem">
-        <router-link to="/deliveryview">Contact</router-link>
+        <router-link to="/deliveryview">Delivery</router-link>
       </li>
       <li class="searchitem">
         <div id="search">
@@ -41,17 +41,20 @@
 }
 
 #nav {
+  z-index: abs($number: 300);
   padding: 15px;
   background-color: #c5ac87;
+  border-bottom: 5px solid #ff902a;
   position: sticky;
   top: 0;
   a {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     font-weight: bold;
     color: #2c3e50;
     text-decoration: none;
-
     &.router-link-exact-active {
-      color: #ff902a;
+      color: rgba(255, 144, 42);
+      filter: drop-shadow(0px 4px 4px #ff912a9e) drop-shadow(0px 4px 4px #ff912a9e);
     }
   }
 
@@ -108,6 +111,7 @@
       border: none;
       padding: 0 10px;
       margin: 0 10px;
+      outline: none;
     }
     img {
       width: 20px;

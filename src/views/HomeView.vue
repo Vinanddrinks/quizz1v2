@@ -31,7 +31,65 @@
       </div>
     </section>
     <section id="topProducts">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed minima eaque esse fugiat quo possimus enim itaque. Fugit cupiditate repudiandae exercitationem atque deleniti ipsum quibusdam magnam nemo porro nihil? Quisquam.</p>
+      <h2>Top products</h2>
+      <div id="topProductsContainer">
+        <DrinkCard
+          :key="drinks.drinks[0].id"
+          :name="drinks.drinks[0].name"
+          :description="drinks.drinks[0].description"
+          :price="drinks.drinks[0].price"
+          :image="drinks.drinks[0].image"
+        ></DrinkCard>
+        <DrinkCard
+          :key="drinks.drinks[1].id"
+          :name="drinks.drinks[1].name"
+          :description="drinks.drinks[1].description"
+          :price="drinks.drinks[1].price"
+          :image="drinks.drinks[1].image"
+        ></DrinkCard>
+        <DrinkCard
+          :key="drinks.drinks[2].id"
+          :name="drinks.drinks[2].name"
+          :description="drinks.drinks[2].description"
+          :price="drinks.drinks[2].price"
+          :image="drinks.drinks[2].image"
+        ></DrinkCard>
+      </div>
+    </section>
+    <section id="slotCardSection">
+      <h2>Slotted Cards:</h2>
+      <div id="cardContainer">
+        <SlottedCard>
+          <template #top>
+            <h2>Our coffee</h2>
+          </template>
+          <template #middle>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptas, quae, quod, voluptates quibusdam voluptatibus quidem
+              voluptatum quos quia quas nesciunt. Quisquam, quae. Quisquam
+              voluptas, quae, quod, voluptates quibusdam voluptatibus quidem
+              voluptatum quos quia quas nesciunt. Quisquam, quae.
+            </p>
+          </template>
+          <template #bottom>
+            <router-link to="/">
+              <TextButton :text="'More information'"> </TextButton>
+            </router-link>
+          </template>
+        </SlottedCard>
+        <SlottedCard>
+          <template #top
+            ><img src="@/assets/cart.svg" alt="cart logo"
+          /></template>
+          <template #middle><p>The cart logo</p></template>
+          <template #bottom>
+            <router-link to="/cartview">
+              <TextButton :text="'Link to the cart view'"> </TextButton>
+            </router-link>
+          </template>
+        </SlottedCard>
+      </div>
     </section>
   </div>
 </template>
@@ -41,19 +99,28 @@ import textPictureButton from "@/components/textPictureButton.vue";
 import textButton from "@/components/textButton.vue";
 import cartWhite from "@/assets/cartWhite.svg";
 import TextButton from "../components/textButton.vue";
+import DrinkCard from "../components/drinkCard.vue";
+import SlottedCard from "@/components/SlottedCard.vue";
 export default {
   name: "HomeView",
   data() {
     return {
       cartWhite,
+      drinks: [],
+      topDrinks: [],
     };
   },
   computed: {},
   methods: {},
+  beforeMount() {
+    this.drinks = JSON.parse(localStorage.getItem("drinks"));
+  },
   components: {
     textPictureButton,
     textButton,
     TextButton,
+    DrinkCard,
+    SlottedCard,
   },
 };
 </script>
@@ -69,9 +136,10 @@ export default {
     justify-content: space-around;
     align-items: center;
     #titleContainer {
-    width: 30%;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
-    border-radius: 20px;
+      width: 30%;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35))
+        drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.35));
+      border-radius: 20px;
       display: inline-block;
       h1 {
         font-size: 3rem;
@@ -85,15 +153,15 @@ export default {
         font-size: 1rem;
         color: #7e7d7a;
       }
-        .titleElements {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-            textPictureButton & textButton {
-                margin: 1rem 1rem;
-            }
+      .titleElements {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+        textPictureButton & textButton {
+          margin: 1rem 1rem;
         }
+      }
     }
   }
   #promoPicture {
@@ -104,10 +172,36 @@ export default {
   }
   #topProducts {
     background-color: #f9d9aa;
-    height: 100vh;
-    display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
+    #topProductsContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 2rem;
+      margin-block: 2rem;
+      width: 50%;
+      margin-inline: auto;
+      drinkCard {
+        margin: 1rem;
+      }
+    }
+  }
+  #slotCardSection {
+    background-color: #f9d9aa;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    #cardContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 2rem;
+      margin-block: 2rem;
+      width: 50%;
+      margin-inline: auto;
+    }
   }
 }
 </style>

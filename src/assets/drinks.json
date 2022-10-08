@@ -1,0 +1,175 @@
+{
+  "drinks":[
+    {
+      "id": 1,
+      "grade":4.8,
+      "name": "Espresso",
+      "price": 1.99,
+      "description": "A shot of espresso.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 21000,
+      "temperature": "hot"
+    },
+    {
+      "id": 2,
+      "grade":4.8,
+      "name": "Cappuccino",
+      "price": 2.99,
+      "description": "Espresso, hot milk, and a steamed milk foam.",
+      "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fa%2Fa3%2FCappuccino_blue_table.jpg%2F1200px-Cappuccino_blue_table.jpg&f=1&nofb=1&ipt=6b97420452242c9d0d869bec2216ae04cd37bbd769ccc518cd055dbbef620a73&ipo=images",
+      "sold": 10000,
+        "temperature": "hot"
+    },
+    {
+      "id": 3,
+      "grade":4.8,
+      "name": "Latte",
+      "price": 2.49,
+      "description": "Espresso with steamed milk.",
+      "image": "https://cdn-elle.ladmedia.fr/var/plain_site/storage/images/elle-a-table/recettes-de-cuisine/latte-macchiato-2079886/22105792-3-fre-FR/Latte-Macchiato.jpg",
+      "sold": 5000,
+        "temperature": "hot"
+    },
+    {
+      "id": 4,
+      "grade":4.8,
+      "name": "Mocha",
+      "price": 3.49,
+      "description": "Espresso, hot milk, chocolate sauce, and steamed milk foam.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 2000,
+        "temperature": "hot"
+    },
+    {
+      "id": 5,
+      "grade":4.8,
+      "name": "Americano",
+      "price": 2.99,
+      "description": "Espresso with hot water.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 1000,
+        "temperature": "hot"
+    },
+    {
+      "id": 6,
+      "grade":4.8,
+      "name": "Macchiato",
+      "price": 2.99,
+      "description": "Espresso with a small amount of foamed milk.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 500,
+        "temperature": "hot"
+    },
+    {
+      "id": 7,
+      "grade":4.8,
+      "name": "Cortado",
+      "price": 2.99,
+      "description": "Espresso with a small amount of hot milk.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 200,
+        "temperature": "hot"
+    },
+    {
+      "id": 8,
+      "grade":4.8,
+      "name": "Affogato",
+      "price": 3.99,
+      "description": "Espresso poured over a scoop of vanilla ice cream.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 100,
+        "temperature": "hot"
+    },
+    {
+      "id": 9,
+      "grade":4.8,
+      "name": "Flat White",
+      "price": 2.99,
+      "description": "Espresso with microfoam.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 50,
+        "temperature": "hot"
+    },
+    {
+      "id": 10,
+      "grade":4.8,
+      "name": "Vienna",
+      "price": 2.99,
+      "description": "Espresso with hot milk and chocolate.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 20,  
+        "temperature": "hot"
+    },
+    {
+      "id": 11,
+      "grade":4.8,
+      "name": "Doppio",
+      "price": 2.99,
+      "description": "Double shot of espresso.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 10,
+        "temperature": "hot"
+    },
+    {
+      "id": 12,
+      "grade":4.8,
+      "name": "Ristretto",
+      "price": 2.99,
+      "description": "Short shot of espresso.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 5,
+        "temperature": "hot"
+    },
+    {
+      "id": 13,
+      "grade":4.8,
+      "name": "Café au Lait",
+      "price": 2.99,
+      "description": "Espresso with hot milk.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 2,
+        "temperature": "hot"
+    },
+    {
+      "id": 14,
+      "grade":4.8,
+      "name": "Café Bombón",
+      "price": 3.99,
+      "description": "Espresso with a chocolate-covered coffee bean.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 1,
+        "temperature": "hot"
+    },
+    {
+      "id": 15,
+      "grade":4.8,
+      "name": "Café Cubano",
+      "price": 3.99,
+      "description": "Espresso with sugar and a dash of bitters.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 1,
+        "temperature": "hot"
+    },
+    {
+      "id": 16,
+      "grade":4.8,
+      "name": "Iced Coffee",
+      "price": 3.99,
+      "description": "Espresso with cold milk and ice.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 331000,
+        "temperature": "cold"
+
+    },
+    {
+      "id": 17,
+      "grade":4.8,
+      "name": "Iced Moka",
+      "price": 5.99,
+      "description": "Espresso with cold milk, chocolate and ice.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG",
+      "sold": 2210800,
+        "temperature": "cold"
+    }
+  ]
+}

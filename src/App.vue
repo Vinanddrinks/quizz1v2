@@ -3,7 +3,9 @@
     <ul id="navList">
       <li class="icoitem">
         <div id="navico">
-          <router-link to="/"><img src="@/assets/logo_coffe.svg" alt="logo" /></router-link>
+          <router-link to="/"
+            ><img src="@/assets/logo_coffe.svg" alt="logo"
+          /></router-link>
         </div>
       </li>
       <li class="linkitem">
@@ -17,19 +19,59 @@
       </li>
       <li class="searchitem">
         <div id="search">
-          <img src="@/assets/search.svg" alt="search">
+          <img src="@/assets/search.svg" alt="search" />
           <input type="text" placeholder="Search" />
         </div>
       </li>
       <li class="cartitem">
         <div id="cart">
-          <router-link to="/cartview"><img src="@/assets/cart.svg" alt="cart" /></router-link>
+          <router-link to="/cartview"
+            ><img src="@/assets/cart.svg" alt="cart"
+          /></router-link>
         </div>
       </li>
     </ul>
   </nav>
   <router-view />
 </template>
+<script>
+export default {
+  name: "MainApp",
+  created() {
+    window.addEventListener("beforeunload", (event) => {
+      // to create a pop-up when the user want to leave the page
+      event.preventDefault();
+      window.confirm("Are you sure you want to leave?");
+      event.returnValue = ""; // mandatory return value for Chromium browsers
+    });
+  },
+  data() {
+    return {};
+  },
+  computed: {},
+  methods: {
+    beforeMount: (onload = function () {
+      // to load into local storage all values from the "database" ;-)
+      console.log("MainApp");
+      if (localStorage.getItem("Drinks") == null) {
+        import("./assets/drinks.json").then((data) => {
+          localStorage.setItem("drinks", JSON.stringify(data.default));
+        });
+        console.log("Liste des boissons créée");
+      } else {
+        console.log("Liste des boissons déjà créée");
+      }
+      if (this.localStorage.getItem("Cart") == null) {
+        this.localStorage.setItem("Cart", JSON.stringify([]));
+        console.log("Liste des produits ajoutés au panier créée");
+      } else {
+        console.log("Liste des produits ajoutés au panier déjà créée");
+      }
+      return null;
+    }),
+  },
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -48,13 +90,15 @@
   position: sticky;
   top: 0;
   a {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)) drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+      drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     font-weight: bold;
     color: #2c3e50;
     text-decoration: none;
     &.router-link-exact-active {
       color: rgba(255, 144, 42);
-      filter: drop-shadow(0px 4px 4px #ff912a9e) drop-shadow(0px 4px 4px #ff912a9e);
+      filter: drop-shadow(0px 4px 4px #ff912a9e)
+        drop-shadow(0px 4px 4px #ff912a9e);
     }
   }
 
@@ -80,7 +124,7 @@
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: auto;
@@ -97,7 +141,7 @@
     color: black;
     font-weight: bold;
     text-decoration: none;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     font-style: normal;
     font-weight: 400;
     font-size: auto;
@@ -119,6 +163,5 @@
       margin-left: 10px;
     }
   }
-
 }
 </style>

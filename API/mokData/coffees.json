@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Vanilla Latte",
+        "image": "coffee1.png",
+        "average_rating": 4.8,
+        "count_orders": 21300,
+        "is_hot": true
+    },
+    {
+        "id": 2,
+        "name": "Espresso",
+        "image": "coffee2.png",
+        "average_rating": 4.2,
+        "count_orders": 12000,
+        "is_hot": true
+    },
+    {
+        "id": 3,
+        "name": "Hazelnut Latte",
+        "image": "coffee3.png",
+        "average_rating": 4.0,
+        "count_orders": 23000,
+        "is_hot": true
+    },
+    {
+        "id": 4,
+        "name": "Hot Milk",
+        "image": "coffee4.png",
+        "average_rating": 3.8,
+        "count_orders": 12500,
+        "is_hot": true
+    },
+    {
+        "id": 5,
+        "name": "Ice Cream Coffee",
+        "image": "coffee5.png",
+        "ordered by count_orders": 3.5,
+        "count_orders": 11200,
+        "is_hot": false
+    },
+    {
+        "id": 6,
+        "name": "Frapuccino",
+        "image": "coffee6.png",
+        "average_rating": 4.1,
+        "count_orders": 8000,
+        "is_hot": false
+    },
+    {
+        "id": 7,
+        "name": "Cappuccino",
+        "image": "coffee7.png",
+        "average_rating": 4.3,
+        "count_orders": 9000,
+        "is_hot": true
+    },
+    {
+        "id": 8,
+        "name": "Mocha",
+        "image": "coffee8.png",
+        "average_rating": 4.5,
+        "count_orders": 10000,
+        "is_hot": true
+    },
+    {
+        "id": 9,
+        "name": "Americano",
+        "image": "coffee9.png",
+        "average_rating": 4.2,
+        "count_orders": 11000,
+        "is_hot": true
+    },
+    {
+        "id": 10,
+        "name": "Caramel Macchiato",
+        "image": "coffee10.png",
+        "average_rating": 4.0,
+        "count_orders": 12000,
+        "is_hot": false
+    },
+    {
+        "id": 11,
+        "name": "Iced Coffee",
+        "image": "coffee11.png",
+        "average_rating": 4.2,
+        "count_orders": 13000,
+        "is_hot": false
+    },
+    {
+        "id": 12,
+        "name": "Iced Latte",
+        "image": "coffee12.png",
+        "average_rating": 4.0,
+        "count_orders": 14000,
+        "is_hot": false
+    },
+    {
+        "id": 13,
+        "name": "Iced Mocha",
+        "image": "coffee13.png",
+        "average_rating": 4.1,
+        "count_orders": 15000,
+        "is_hot": false
+    },
+    {
+        "id": 14,
+        "name": "Iced Cappuccino",
+        "image": "coffee14.png",
+        "average_rating": 4.3,
+        "count_orders": 16000,
+        "is_hot": false
+    },
+    {
+        "id": 15,
+        "name": "Iced Americano",
+        "image": "coffee15.png",
+        "average_rating": 4.2,
+        "count_orders": 17000,
+        "is_hot": false
+    },
+    {
+        "id": 16,
+        "name": "Iced Hazelnut Latte",
+        "image": "coffee16.png",
+        "average_rating": 4.0,
+        "count_orders": 18000,
+        "is_hot": false
+    },
+    {
+        "id": 17,
+        "name": "java chip frapuccino",
+        "image": "coffee17.png",
+        "average_rating": 4.1,
+        "count_orders": 19000,
+        "is_hot": false
+    },
+    {
+        "id": 18,
+        "name": "chocolate chip frapuccino",
+        "image": "coffee18.png",
+        "average_rating": 4.3,
+        "count_orders": 20000,
+        "is_hot": false
+    }
+]

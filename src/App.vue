@@ -18,10 +18,12 @@
         <router-link to="/deliveryview">Delivery</router-link>
       </li>
       <li class="searchitem">
-        <div id="search">
-          <img src="@/assets/search.svg" alt="search" />
-          <input type="text" placeholder="Search" />
-        </div>
+        <router-link to="/searchView">
+          <div id="search">
+            <img src="@/assets/search.svg" alt="search" />
+            <input type="text" placeholder="Search" v-model="searchInfo" />
+          </div>
+        </router-link>
       </li>
       <li class="cartitem">
         <div id="cart">

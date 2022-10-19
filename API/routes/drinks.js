@@ -1,23 +1,19 @@
 var express = require("express");
 var router = express.Router();
 var drinks = JSON.parse(require("fs").readFileSync("mokData/coffees.json"));
-
 // GET drinks listing.
 router.get("/", function (req, res) {
   res.json(drinks);
 });
-
 // GET Hot drinks listing.
 router.get("/hot", function (req, res) {
   res.json(drinks.filter((drink) => drink.is_hot));
 });
-
 // GET Cold drinks listing.
 router.get("/cold", function (req, res) {
   res.json(drinks.filter((drink) => !drink.is_hot));
 });
 module.exports = router;
-
 // GET best drinks listing.
 router.get("/best", function (req, res) {
   res.json(

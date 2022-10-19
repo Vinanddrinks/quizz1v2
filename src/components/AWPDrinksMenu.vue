@@ -18,6 +18,18 @@
 <script>
 import drinkCardNoDesc from "@/components/drinkCardNoDesc.vue";
 export default {
+  methods: {
+    getDrinks(menuType) {
+      fetch("/api/drinks/" + menuType)
+        .then((response) => response.json())
+        .then((data) => {
+          this.drinks = data;
+        });
+    },
+  },
+  props: {
+    menuType: String,
+  },
   name: "searchView",
   components: {
     drinkCardNoDesc,
@@ -28,11 +40,7 @@ export default {
     };
   },
   beforeMount() {
-    fetch("api/drinks")
-      .then((response) => response.json())
-      .then((data) => {
-        this.drinks = data;
-      });
+    this.getDrinks(this.menuType);
   },
 };
 </script>

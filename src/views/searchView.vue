@@ -1,6 +1,6 @@
 <template>
   <div id="globalContainer">
-    <AWPDrinksMenu />
+    <AWPDrinksMenu :menuType="this.menuType" />
   </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
   name: "SearchView",
   components: {
     AWPDrinksMenu,
+  },
+  data() {
+    return {
+      menuType: "best",
+    };
   },
 };
 </script>

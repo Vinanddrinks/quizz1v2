@@ -28,7 +28,10 @@ export default {
     },
   },
   props: {
-    menuType: String,
+    menuType: {
+      type: String,
+      required: true,
+    },
   },
   name: "searchView",
   components: {
@@ -39,12 +42,30 @@ export default {
       drinks: [],
     };
   },
-  beforeMount() {
-    this.getDrinks(this.menuType);
+  // Before we mount the component, we call the getDrinks method
+  beforeCreate() {
+    var component = this;
+    if (
+      component.menuType == "popular" ||
+      component.menuType == "best" ||
+      component.menuType == "Hot" ||
+      component.menuType == "Cold"
+    ) {
+      fetch("/api/drinks/" + component.menuType)
+        .then((response) => response.json())
+        .then((data) => {
+          this.drinks = data;
+        });
+    } else {
+      fetch("/api/drinks/")
+        .then((response) => response.json())
+        .then((data) => {
+          this.drinks = data;
+        });
+    }
   },
 };
 </script>
-
 <style scoped lang="scss">
 #content {
   display: inline-flex;

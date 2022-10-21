@@ -24,7 +24,7 @@ import cartWhite from "@/assets/cartWhite.svg";
 export default {
   methods: {
     bgHot() {
-      this.bgColor = "red";
+      this.bgColor = "#ffac29";
     },
     bgCold() {
       this.bgColor = "#4168e0";
@@ -46,7 +46,7 @@ export default {
   },
   mounted() {
     if (this.is_hot) {
-      this.bgColor = "red";
+      this.bgColor = "#ffac29";
     } else {
       this.bgColor = "#4168e0";
     }
@@ -62,8 +62,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 900px;
-  height: 400px;
+  width: 25%;
   background-color: v-bind("bgColor");
   border-radius: 10px;
   margin: 10px;
@@ -74,6 +73,7 @@ export default {
     img {
       width: 100%;
       height: 100%;
+      border-radius: 5%;
     }
   }
   #cardDescription {

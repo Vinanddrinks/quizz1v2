@@ -44,5 +44,5 @@ router.get("/name/:name", function (req, res) {
 });
 // GET picture of drink by path.
 router.get("/picture/:image", function (req, res) {
-    res.sendFile(req.params.image, { root: "mokData" });
+  res.sendFile(req.params.image, { root: "mokData" });
 });

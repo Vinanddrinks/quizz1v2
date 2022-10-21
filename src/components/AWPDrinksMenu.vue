@@ -42,7 +42,7 @@ export default {
       drinks: [],
     };
   },
-  // Before we mount the component, we call the getDrinks method
+  // Before we create the component, we call the getDrinks method
   beforeCreate() {
     var component = this;
     if (
